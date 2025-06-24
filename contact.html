@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>Contact</title>
+   <link rel="stylesheet" href="/[CSS]/color.css" />
+   <link rel="stylesheet" href="/[CSS]/contact.css" />
+   <link rel="stylesheet" href="/[CSS]/reset.css" />
+   <link rel="stylesheet" href="/[CSS]/home.css" />
+</head>
+<body>
+<header>
+  <nav class="nav-left">
+    <ul>
+      <li><a href="/index.html">HOME</a></li>
+      <li><a href="/projects.html">PROJECTS</a></li>
+      <li><a href="/about.html">ABOUT</a></li>
+      <li><a href="/contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <p class="header-name-text">Artem</p>
+  <div class="header-image-container">
+    <img src="/[ASSETS]/1511336_69825.gif" alt="comp">
+  </div>
+</header>
+<main>
+  <div class="contact__form-container">
+    <div style="position: absolute;
+    top: 9%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 28px;">Write Me!</div>
+        <form action="#" class="contact__form">
+            <div class="contact__form-field">
+                <label class="contact__form-label" for="name">Name</label>
+                <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name"
+                    id="name" />
+            </div>
+            <div class="contact__form-field">
+                <label class="contact__form-label" for="email">Email</label>
+                <input required placeholder="Enter Your Email" type="text" class="contact__form-input" name="email"
+                    id="email" />
+            </div>
+            <div class="contact__form-field">
+                <label class="contact__form-label" for="message">Message</label>
+                <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message"
+                    name="message" id="message"></textarea>
+            </div>
+            <!-- cool button -->
+            <div class="container">
+                <div class="center">
+                    <button class="btn">
+                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                        </svg>
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </div>
+            <!-- end cool button-->
+        </form>
+    </div>
+</main>
+ <footer>
+    <p>&copy; 2025 Мой Сайт. Все права защищены.</p>
+    <p>
+      <a href="/About.html">О нас</a> |
+      <a href="/contact.html">Контакты</a> |
+      <a href="#">Политика конфиденциальности</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+ header{
+    margin-bottom: 1rem;
+
+ }
+
+ body {
+      background-color: #111;
+      color: white;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+    }
+
+    .dossier-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .folder {
+      border: 2px solid white;
+      padding: 20px;
+      background-color: #000;
+      position: relative;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .folder:hover {
+      background-color: #222;
+    }
+
+    .folder::before {
+      position: absolute;
+      top: -14px;
+      left: 20px;
+      background-color: #000;
+      padding: 0 5px;
+      font-size: 12px;
+      color: white;
+    }
+
+    .folder h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .folder p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
