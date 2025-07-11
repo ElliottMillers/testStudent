@@ -1,0 +1,134 @@
+body {
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 20px 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.green {
+    color: #00ff00;
+}
+
+.red {
+    color: #ff3333;
+}
+
+.blue {
+    color: #3399ff;
+}
+
+#intro {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    white-space: pre;
+    z-index: 10;
+    line-height: 0.6;
+}
+
+.line {
+    opacity: 0;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+
+     0%,
+    100% {
+        opacity: 1;
+    }
+
+     50% {
+        opacity: 0;
+    }
+}
+
+#logo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+    white-space: pre;
+    user-select: none;
+}
+
+#logo pre {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-line {
+    opacity: 0;
+}
+
+#press-key {
+    margin-top: 1em;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    animation: none;
+    display: block;
+    user-select: none;
+}
+
+#press-key.visible {
+    opacity: 1;
+    visibility: visible;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+#terminal {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    user-select: text;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+#prompt {
+    margin-right: 5px;
+    user-select: none;
+}
+
+#command-input {
+    background: black;
+    border: none;
+    outline: none;
+    color: #00ff00;
+    font-family: monospace;
+    font-size: 16px;
+    flex-grow: 1;
+    user-select: text;
+}
+
+#cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #00ff00;
+    margin-left: 2px;
+    animation: blink 1s steps(2, start) infinite;
+    user-select: none;
+}

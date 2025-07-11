@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <title>Home</title>
-   <link rel="stylesheet" href="/css/color.css">
-   <link rel="stylesheet" href="/css/reset.css">
-   <link rel="stylesheet" href="/css/home.css">
+  <meta charset="UTF-8" />
+  <title>MIAR 99 System Terminal</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="js.js" defer></script>
 </head>
-<body style="overflow: hidden;">
-<header>
-  <nav class="nav-left">
-    <ul>
-      <li><a href="/index.html">HOME</a></li>
-      <li><a href="/projects.html">PROJECTS</a></li>
-      <li><a href="/about.html">ABOUT</a></li>
-      <li><a href="/contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-  <div>
-     <p class="header-name-text">Artem</p>
+<body>
+
+  <!-- Intro -->
+  <div id="intro">
+    <div class="line">> SYSTEM BOOTING...</div>
+    <div class="line">> Loading core modules...</div>
+    <div class="line">> Checking memory: OK</div>
+    <div class="line">> Establishing secure link...</div>
+    <div class="line">> Decrypting interface...</div>
+    <div class="line">> ACCESS GRANTED <span class="cursor">▌</span></div>
   </div>
-  <div class="header-image-container">
-    <img src="/assets/1511336_69825.gif" alt="comp">
+
+  <!-- Logo -->
+  <div id="logo">
+    <pre>
+<span class="logo-line">`7MMM.     ,MMF'`7MMF'      db      `7MM"""Mq.                          </span>
+<span class="logo-line">  MMMb    dPMM    MM       ;MM:       MM   `MM.                         </span>
+<span class="logo-line">  M YM   ,M MM    MM      ,V^MM.      MM   ,M9       .d*"*bg.  .d*"*bg. </span>
+<span class="logo-line">  M  Mb  M' MM    MM     ,M  `MM      MMmmdM9       6MP    Mb 6MP    Mb </span>
+<span class="logo-line">  M  YM.P'  MM    MM     AbmmmqMA     MM  YM.       YMb    MM YMb    MM </span>
+<span class="logo-line">  M  `YM'   MM    MM    A'     VML    MM   `Mb.      `MbmmdM9  `MbmmdM9 </span>
+<span class="logo-line">.JML. `'  .JMML..JMML..AMA.   .AMMA..JMML. .JMM.          .M'       .M' </span>
+<span class="logo-line">                                                        .d9       .d9   </span>
+<span class="logo-line">                                                      m"'       m"'     </span>
+
+<span class="logo-line">  Personal Computer</span>
+
+<span class="logo-line">    +----------------------------------------------+</span>
+<span class="logo-line">    |        MIAR 99 System Initialization         |</span>
+<span class="logo-line">    |               Version 1.00                   |</span>
+<span class="logo-line">    +----------------------------------------------+</span>
+
+<span class="logo-line">  (C) Copyright MIAR Systems 1991–2025. All rights reserved.</span>
+<span class="logo-line">  (C) Powered by Sayo-nara22 BIOS v9.9.99</span>
+
+<span class="logo-line" id="press-key">    Press Enter (⏎) to continue or Esc to cancel.<span class="cursor">▌</span></span>
+  </pre>
   </div>
-</header>
-<main>
-  <div class="text">
-    <h2>WELCOME,</h2>
-    <h3>I am Artem, I am Web Developer</h3>
-    <p>If we need a site that works like a clock - write to me. I will make it beautiful and smart.</p>
+
+  <!-- Terminal -->
+  <div id="terminal-container" style="display:none; flex-direction: column; height: 100vh; padding-top: 5px; box-sizing: border-box;">
+    <div id="terminal" tabindex="0"></div>
+    <div id="input-line">
+      <div id="prompt">$</div>
+      <input type="text" id="command-input" autocomplete="off" spellcheck="false" />
+      <div id="cursor"></div>
+    </div>
   </div>
-  <div class="gif-center">
-    <img src="/assets/tumblr_edc262964d14f8381cb8fca4f14b6e19_69d2bee9_640.gif" alt="GIF">
-  </div>
-</main>
+
+  <!-- Sounds -->
+  <audio id="logo-sound" src="../vklyuchenie-i-vyiklyuchenie-kompyutera-kompyutera-39565.mp3" preload="auto"></audio>
+  <audio id="terminal-loop" src="../kompyuter-vklyuchayut-vklyuchenie-kompyutera-30521.mp3" loop preload="auto"></audio>
+  <audio id="key-sound" src="../byistroe-klatsanie-po-klaviature-kompyutera.mp3" preload="auto"></audio>
+
 </body>
 </html>
